@@ -55,7 +55,7 @@ function fire() {
 			break;
 		case 'custom':
 			if (customData.length === 0) {
-				var customWordList = prompt("Please enter custom word list. The list will be saved until your refresh your browser. (The words MUST be delimanted by spaces). eg: cat dog mouse", "Enter words here");
+				var customWordList = prompt("Please enter custom word list. The list will be saved until your refresh your browser. (The words MUST be delimited by spaces). eg: cat dog mouse", "Enter words here");
 				customData = customWordList.split(' ');
 			}
 			sessionData = customData.slice(0);
@@ -155,13 +155,7 @@ function clicked(value) {
       }
     }
 
-		if (document.getElementById("confirm").checked) {
-			if (window.confirm("Are sure you want to select '" + word + "'?")) {
-        doStuff();
-			}
-		} else {
       doStuff();
-		}
 	}
 
 	updateScore();
