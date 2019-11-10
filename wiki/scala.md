@@ -13,3 +13,38 @@
 Best to run following commands from within `sbt` (don't start the jvm
 everytime):
 - Run specific test class: `testOnly *UserSpec`
+
+## Tests
+
+To test methods returning Futures, use [AsyncFlatSpec](http://www.scalatest.org/user_guide/async_testing)
+
+```scala
+  // given
+  // ...
+
+  // when
+  val futureResult: Future[Int] = myService.myMethod()
+
+  // then
+  val futureResult.map(result => {
+    assert(result == 42)
+  })
+```
+
+Note: with `AsyncFlatSpec` tests must return Future of assertions. If you only
+want to test that some methods are called, i.e with mockito's `verify`, you can
+add `succeed` as a last test (more or less equivalent to assert(1 == 1):
+
+```scala
+  // given
+  // ...
+
+  // when
+  val futureResult: Future[Int] = myService.myMethod()
+
+  // then
+  val futureResult.map(result => {
+    verify(...)
+    succeed
+  })
+```
