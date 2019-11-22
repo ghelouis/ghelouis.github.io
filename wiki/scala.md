@@ -22,6 +22,9 @@ Best to run following commands from within `sbt` (don't start the jvm
 everytime):
 - Run specific test class: `testOnly *UserSpec`
 
+## Gotchas
+Scala case classes are limited to 22 fields.
+
 ## Tests
 
 To test methods returning Futures, use [AsyncFlatSpec](http://www.scalatest.org/user_guide/async_testing)
