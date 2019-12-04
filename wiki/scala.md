@@ -23,7 +23,18 @@ everytime):
 - Run specific test class: `testOnly *UserSpec`
 
 ## Gotchas
-Scala case classes are limited to 22 fields.
+Case classes are limited to 22 fields.
+
+## Futures
+Handle an exception thrown from within a future:
+
+```scala
+val futureResult = processStuf()
+futureResult.map(result =>
+  logger.info("all good").recover {
+    case t: Throwable => logger.info("something went wrong :'(", t)
+  }
+```
 
 ## Tests
 
@@ -44,7 +55,7 @@ val futureResult.map(result => {
 
 Note: with `AsyncFlatSpec` tests must return Future of assertions. If you only
 want to test that some methods are called, i.e with mockito's `verify`, you can
-add `succeed` as a last test (more or less equivalent to assert(1 == 1):
+add `succeed` as a last test (more or less equivalent to assert(1 == 1)):
 
 ```scala
 // given
