@@ -31,8 +31,9 @@ Handle an exception thrown from within a future:
 ```scala
 val futureResult = processStuf()
 futureResult.map(result =>
-  logger.info("all good").recover {
-    case t: Throwable => logger.info("something went wrong :'(", t)
+  logger.info("all good")).recover {
+    case t: Throwable =>
+      logger.info("something went wrong :'(", t)
   }
 ```
 
