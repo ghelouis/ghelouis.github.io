@@ -4,4 +4,6 @@
 
 [Bash](bash.md)
 
+[Git](git.md)
+
 [Tools](tools.md)
