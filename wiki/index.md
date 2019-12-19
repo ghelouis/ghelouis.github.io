@@ -7,3 +7,5 @@
 [Git](git.md)
 
 [Tools](tools.md)
+
+[Vim](vim.md)
