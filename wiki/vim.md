@@ -8,6 +8,7 @@
 `|` will format the line
 
 ## Commands
+- Show help for command, motion, any topic: `:help <something>`
 - Chain commands: use `|` between commands
 - Reload current file: `:e`
 - Go to line n: `:n`
@@ -21,3 +22,7 @@ cf [https://github.com/JetBrains/ideavim](https://github.com/JetBrains/ideavim)
 
 Put `source ~/.vimrc` in ~/.ideavimrc
 
+## Encrypt file
+`:X`
+
+Note: file needs to be written for the encryption to take effect.
