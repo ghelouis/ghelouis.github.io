@@ -71,3 +71,7 @@ val futureResult.map(result => {
   succeed
 })
 ```
+
+## Coding style
+
+The name of a file containing multiple case classes should be in [camelCase](https://docs.scala-lang.org/style/files.html).
