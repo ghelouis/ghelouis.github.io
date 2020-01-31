@@ -24,7 +24,8 @@ everytime):
 - Compile tests: `test:compile`
 
 ## Gotchas
-Case classes are limited to 22 fields.
+- Case classes are limited to 22 fields
+- When using mockito in tests implicit and optional parameters must also be provided
 
 ## Futures
 Handle an exception thrown from within a future:
