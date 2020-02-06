@@ -20,8 +20,9 @@ initialize ~= { _ =>
 
 Best to run following commands from within `sbt` (don't start the jvm
 everytime):
-- Run specific test class: `testOnly *UserSpec`
 - Compile tests: `test:compile`
+- Run specific test class: `testOnly *UserSpec`
+- Run specific test: `testOnly *UserSpec -- -z myTest`
 
 ## Gotchas
 - Case classes are limited to 22 fields
