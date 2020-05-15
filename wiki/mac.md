@@ -10,4 +10,8 @@
 
 ## Keybindings
 
-- Move to the next window of the same app: Settings > Keyboard > Shortcuts > Move focus to next window
+- Move to the next window of the same app: Settings > Keyboard > Shortcuts > Keyboard > Move focus to next window
+
+## Protips
+
+- Prevent random rearranging the order of desktops: System Prefs > Mission Control > uncheck `Automatically rearrange Spaces based on most recent use`
