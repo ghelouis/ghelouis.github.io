@@ -16,7 +16,12 @@
 Note: file needs to be written for the encryption to take effect.
 
 ## Load .vimrc in IntelliJ
-`echo "source ~/.vimrc" > ~/.ideavimrc` (cf [https://github.com/JetBrains/ideavim](https://github.com/JetBrains/ideavim))
+Put
+```
+set ideajoin
+source ~/.vimrc
+```
+in `~/.ideavimrc` (see [https://github.com/JetBrains/ideavim](https://github.com/JetBrains/ideavim))
 
 ## Plugins
 - [table mode](https://github.com/dhruvasagar/vim-table-mode)
