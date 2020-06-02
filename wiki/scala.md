@@ -78,3 +78,23 @@ val futureResult.map(result => {
 ## Coding style
 
 The name of a file containing multiple case classes should be in [camelCase](https://docs.scala-lang.org/style/files.html).
+
+## Play
+Convert json to a case class:
+
+```scala
+import play.api.libs.json.{ Json, Reads }
+
+MyCaseClass(...)
+
+object MyCaseClass {
+  implicit val myCaseClassReads:Reads[MyCaseClass] = Json.reads[MyCaseClass]
+}
+
+def fromJson(json: JsValue) = {
+  Json.fromJson[MyCaseClass](json) match {
+    case JsSuccess(myCaseClass, _) => // do something with myCaseClass
+    case _ => // json couldn't be converted to myCaseClass
+  }
+}
+```
