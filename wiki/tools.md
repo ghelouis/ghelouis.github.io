@@ -6,3 +6,7 @@
 
 ## Javascript
 - Animated annotations: https://roughnotation.com/
+
+## Diagrams
+- https://draw.io (able to re-import and edit png)
+- https://excalidraw.com/ (nice hand-drawn design)
