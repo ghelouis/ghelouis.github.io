@@ -98,3 +98,6 @@ def fromJson(json: JsValue) = {
   }
 }
 ```
+
+## Implicits
+The Show Implicit Hints provided by IntelliJ is a lifesaver
