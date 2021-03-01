@@ -101,3 +101,13 @@ def fromJson(json: JsValue) = {
 
 ## Implicits
 The Show Implicit Hints provided by IntelliJ is a lifesaver
+
+## Try/catch
+```scala
+import scala.util.{ Failure, Success, Try }
+
+Try(somethingThatCanFail()) match {
+  case Success(value) => ...
+  case Failure(exception) => ...
+}
+```
