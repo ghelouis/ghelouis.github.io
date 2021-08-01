@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Guillaume Hélouis" />
+  <meta name="dcterms.date" content="2019-12-18" />
+  <title>What is free software?</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fontawesome.min.css" />
+  <link rel="stylesheet" href="styles/article.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<a id="header" href="https://ghelouis.fr/en">Guillaume's blog</a>
+<div id="subheader">
+  <a href="https://framapiaf.org/@guigui" class="social" title="Mastodon">
+    <i class="fab fa-mastodon"></i>
+  </a>
+  <a href="https://github.com/ghelouis" class="social" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="feed.xml" title="RSS" class="social">
+    <i class="fas fa-rss"></i>
+  </a>
+  |
+  <a href="https://ghelouis.fr/en/projects" title="Projects">Projects</a>
+  |
+  <a href="https://ghelouis.fr/en/about" title="About">About</a>
+  |
+  <a href="https://ghelouis.fr/le-logiciel-libre-kesaco" hreflang="fr" title="français">français</a>
+</div>
+<header id="title-block-header">
+<h1 class="title">What is free software?</h1>
+<p class="date">December 18, 2019</p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>In this time where information technologies take more and more space in our lives, what behaviour can we adopt to maintain some sort of control? Can we at all escape all those unknown algorithms that try to optimize the profit of a couple of super-corporations? At first, let’s dive into what a program is, exactly. Then, we will take a look at the impact of licences on softwares. All of this will allow us to better understand, as a user, what choices are in front of us when deciding on a software.</p>
+<h2 id="how-software-works">How software works</h2>
+<p>What is a program (or software)? For a majority of the population, it is a black box that sends emails, allows us to share photos or play video games on our smartphones. But how does all of this work? Reality is, all those possibilities have been conceived by someone, then transcribed into computer instructions. This is called development or programming. These instructions are nothing less than lines of text written by someone using a programming language. Many of the latter exist, a bit like spoken languages.</p>
+<p>Example of code which once executed displays “Hello, world!”:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">object</span> Main {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="kw">def</span> <span class="fu">main</span>(args: Array[String]) = {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>        <span class="fu">println</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    }</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>}</span></code></pre></div>
+<p>At this point comes an important step. Once software is written, we need to be able to run it. However, a computer understands only binary (sequence of 0 and 1) ! This is why a program must be compiled before it can be run. The compilation being the translation of a source code to a binary understandable by a computer.</p>
+<figure>
+<img src="../images/schema_compilation_en.png" alt="A program must be compiled before it can be run." /><figcaption aria-hidden="true">A program must be compiled before it can be run.</figcaption>
+</figure>
+<p>Installing a software usually means downloading the binary (.exe extension in Windows). It is then possible to run it (usually by double-clicking on the icon). Let’s take note that this binary file is completely unreadable for a human being. A source code, on the other hand, is at least clear for a developer. It is this very important difference that will be of interest for us in the next section, specifically the access to the original source code of a software.</p>
+<h2 id="licences">Licences</h2>
+<p>A developer or a company that publishes a software chooses or not to divulge its source code. This is decided by the licence under which this software is published. Without going into details of the many licences that exist, let’s focus on a few key aspects. A program that doesn’t give access to its source code is called proprietary. We can name for example Photoshop for image processing or Microsoft Word for handling text documents.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> Proprietary software: the source code is kept private.</p>
+<p>A second broad family of licences are the “open-source” ones. As you might have guessed, those programs disclose their source code to the public. Whoever wishes to read, try to understand or even compile them himself can do so in complete freedom. The author is being actively transparent.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> Open-source software: the source code is available for anyone to read.</p>
+<p>Let’s finally talk about a third type of licence (and the main topic of this article): free software. Free as in freedom. Open-source is all well and good, but how could we avoid someone simply grabbing the source code and creating a proprietary software? Furthermore, an open-source program is available to read but does not entail changing or sharing it. So, let’s add the following possibilities: everyone can modify and share the source code at will, all changes having to be upstreamed to the original project. We just described what a free software is. A free software is open-source, but the inverse is not always true.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> Free software: the source code is available, anyone can modify and share it, and all changes must be published openly under those same conditions.</p>
+<p>Let’s illustrate this with a few examples.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Proprietary</th>
+<th>Free</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Image processing</td>
+<td>Photoshop</td>
+<td>Gimp</td>
+</tr>
+<tr class="even">
+<td>Text processing</td>
+<td>Microsoft Word</td>
+<td>LibreOffice</td>
+</tr>
+<tr class="odd">
+<td>Operating system</td>
+<td>Microsoft Windows</td>
+<td>Linux</td>
+</tr>
+</tbody>
+</table>
+<p>BSD is an example of an open-source project upon which Apple based its operating system, MacOS.</p>
+<p><img src="../images/warn.png" class="icon" alt="Warn" /> Let’s not get confused: free software does not always mean free as in free beer. Similarly, a proprietary software can very well be given out for free.</p>
+<p>Proprietary software are usually developed by companies who aim to maximize their profits. It is how capitalism works. The problem is that profit and user experience are not always aligned. Examples are legion. For instance selling private user data (Facebook, Google), getting locked up in a closed ecosystem (Apple), being tracked for advertisement purposes… Or ending up being forced to upgrade and buy the next version of a software. It is in fact the nature of proprietary softwares itself that is the cause of all of this and triggers sooner or later some sort of abuse. The creator finds himself having full power over the user. At some point, a shift towards the creator begins to happen, all the while undermining the end users.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, we saw that the behaviour of a software lies in its source code, the latter not being necessary to run a program. Software not disclosing their source are called proprietary and are usually in the hands of companies looking to maximize their profits. On the other hand, free software is developed openly by communities, volunteers or enthusiasts. For an end-user, opting for a proprietary software is synonymous to trusting some company blindly (and forever). On the contrary, choosing a free software means actively supporting a more transparent and open world, community driven and where the end-users are more likely to be respected.</p>
+<p>Of course, the world is not black and white, and all proprietary software is not to be avoided totally, nor all free software to be adopted blindly. Some proprietary softwares don’t have a free equivalent. Free software can also sometimes feel less polished than the alternatives. What matters most is to be aware of the choice when selecting a software. It is then possible to weigh up the pros and cons rationally and in full knowledge. This choice matters even more when it comes to choosing an operating system, this big program that runs all the others! This is the reason why the next article will be dedicated to Linux, a free alternative to the famous Windows.</p>
+<h2 id="going-further">Going further</h2>
+<ul>
+<li><a href="https://www.gnu.org/philosophy/free-sw.en.html">Free software original definition</a>;</li>
+<li><a href="https://framasoft.com/en/">Framasoft</a>, a French non-profit with many resources and projects concerning free software;</li>
+<li><a href="https://f-droid.org">F-Droid</a>, a catalogue of free and open-source applications for the Android platform.</li>
+</ul>
+<footer class="footer">
+  <a id="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</footer>
+</body>
+</html>

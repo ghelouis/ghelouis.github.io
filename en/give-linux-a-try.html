@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Guillaume Hélouis" />
+  <meta name="dcterms.date" content="2020-04-10" />
+  <title>Give Linux a try!</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fontawesome.min.css" />
+  <link rel="stylesheet" href="styles/article.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<a id="header" href="https://ghelouis.fr/en">Guillaume's blog</a>
+<div id="subheader">
+  <a href="https://framapiaf.org/@guigui" class="social" title="Mastodon">
+    <i class="fab fa-mastodon"></i>
+  </a>
+  <a href="https://github.com/ghelouis" class="social" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="feed.xml" title="RSS" class="social">
+    <i class="fas fa-rss"></i>
+  </a>
+  |
+  <a href="https://ghelouis.fr/en/projects" title="Projects">Projects</a>
+  |
+  <a href="https://ghelouis.fr/en/about" title="About">About</a>
+  |
+  <a href="https://ghelouis.fr/osez-linux" hreflang="fr" title="français">français</a>
+</div>
+<header id="title-block-header">
+<h1 class="title">Give Linux a try!</h1>
+<p class="date">April 10, 2020</p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>In this article I will speak about the <a href="https://ghelouis.fr/en/what-is-free-software">free</a> operating system GNU/Linux, commonly called Linux. We will see that this Windows equivalent is not complicated and includes a good number of benefits. Specifically, Linux gives you the enjoyable feeling of understanding and mastering your computer. If you’re interested, read on!</p>
+<figure>
+<img src="../images/tux.png" width="110" height="130" alt="Tux, the mascot of Linux" /><figcaption aria-hidden="true">Tux, the mascot of Linux</figcaption>
+</figure>
+<h2 id="the-os">The OS</h2>
+<p>What is an OS (Operating System)? It is the main program installed on a computer that launches when it boots. It is the OS that links the physical hardware (keyboard, mouse, screen) and the software of a computer. One can see it as the ultimate master, which decides if this program is allowed to launch, or if pressing this key will trigger this action. The most well known operating systems are macOS by Apple and Windows by Microsoft. Each one of them is proprietary, meaning that the source code is kept secret by each company. On the other hand, Linux is <a href="https://ghelouis.fr/en/what-is-free-software">free</a>, meaning that it is open, can be changed and is maintained by a whole community.</p>
+<h2 id="linux-today">Linux today</h2>
+<p>Even if less well known amongst the general public, Linux is omnipresent in the IT world. In particular, it is the most used OS on servers, those computers connected permanently to the internet and that power the world wide web. The smartphone OS Android is also based on Linux.</p>
+<h2 id="distributions">Distributions</h2>
+<p>It is also because Linux is free that many variants exist today (they are called distributions). Due to anyone being able to perform modifications at will, hundreds of distributions came to be created, each one with its own philosophy. Here are a few examples:</p>
+<ul>
+<li><a href="https://www.debian.org/index.en.html">Debian</a>: stability first. Mature and robust software is given priority. Latest features can take more time to become available.</li>
+<li><a href="https://www.archlinux.org/">Arch Linux</a>: minimalism and simplicity. Excellent documentation. It is common for users to setup and configure the software that they need themselves.</li>
+<li><a href="https://ubuntu.com/desktop">Ubuntu</a>: the most approachable distribution and one of the most popular. Very similar to Windows and macOS.</li>
+</ul>
+<div id="figtable">
+<table>
+<thead>
+<tr class="header">
+<th><img src="../images/logo_debian_94.png" width="64" height="64" alt="Logo of Debian" /></th>
+<th><img src="../images/logo_arch_linux_167.png" width="64" height="64" alt="Logo of Arch Linux" /></th>
+<th><img src="../images/logo_ubuntu_64.png" alt="Logo of Ubuntu" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logo of Debian</td>
+<td>Logo of Arch Linux</td>
+<td>Logo of Ubuntu</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="../images/info.png" class="icon" alt="Info" /> Ubuntu is in fact based on Debian. <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#/media/File:Linux_Distribution_Timeline.svg">The family tree</a> of Linux distributions is quite something!</p>
+<p>For the next part we will focus on Ubuntu. Answers on the topic are easy to find on the internet because this distribution is being used a lot. Nevertheless, the main aspects remain similar, and the rest of this article can very well be applied to any distribution.</p>
+<h2 id="be-curious">Be curious</h2>
+<p>Little side note before we get to the heart of the matter. To fully benefit from Linux and more generally in IT and even in life, <strong>one must be curious</strong>. In this era where any knowledge is one Google search away, depriving yourself from it is truly a choice. I very much recommend not following tutorials blindly but trying to really understand what one is doing and why. I already had at heart in my <a href="https://ghelouis.fr/en/what-is-free-software">first article</a> to encourage you to keep a <strong>critical mind</strong>.</p>
+<p>Anyway. Let’s carry on :)</p>
+<h2 id="installing-ubuntu">Installing Ubuntu</h2>
+<p>There are several options to install a new OS on a computer:</p>
+<ul>
+<li>Completely replace the OS. The most drastic solution;</li>
+<li>Install it in parallel (Dual Boot). You can then choose which OS to continue on at boot;</li>
+<li>Use a virtual machine, meaning a program that simulates an entire computer. The most simple solution.</li>
+</ul>
+<p>To familiarize yourself a little with Ubuntu I recommend starting with this last step. Nevertheless practice makes perfect. If a virtual machine is convenient when starting out, a dual boot and daily usage will teach you a lot more. Finally if convinced, all you have left to do is to remove the original OS!</p>
+<h3 id="installing-virtualbox">Installing VirtualBox</h3>
+<p>Let’s set up Ubuntu in a VM without exiting our current OS.</p>
+<ol type="1">
+<li>Download and install VirtualBox: click <a href="https://www.virtualbox.org/wiki/Downloads">here</a> then on <em>Windows hosts</em> if you are under Windows or on <em>OS X hosts</em> if you have a Mac. Install.</li>
+<li>Download an image of Ubuntu <a href="https://ubuntu.com/download/desktop">here</a> (iso file).</li>
+<li>Launch VirtualBox and create a new virtual machine of type <em>Linux</em> and version <em>Ubuntu (64-bit)</em>.</li>
+<li>Run the VM. On the first start you will be asked to insert the <em>optical virtual disk</em>. Choose the Ubuntu image previously downloaded.</li>
+<li>Follow the Ubuntu install guide. Feel free to select any option without risk as everything happens within the virtual machine. Worse case scenario you can always delete this VM and start from scratch.</li>
+<li>If all goes well you should be able to login and access the desktop.</li>
+</ol>
+<figure>
+<img src="../images/ubuntu_desktop.jpg" alt="Ubuntu’s desktop" /><figcaption aria-hidden="true">Ubuntu’s desktop</figcaption>
+</figure>
+<h2 id="the-package-manager">The package manager</h2>
+<p>One of my favourite functionality present in all Linux distributions is the package manager. It is a program which allows the easy management of software on your machine as well as system updates. The concept is similar to App Stores in the smartphone world. This management is way more secure than on some other operating systems, where you often find yourself downloading software from random websites.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> When downloading a program without a package manager, always use the program’s official website.</p>
+<p>The list of software available via a package manager is looked after by the maintainers of the distribution. In Unbuntu <em>Ubuntu Software Centre</em> allows you to manage your software. This application is built onto Ubuntu’s package manager <em>apt</em>.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> The unified management of software and system updates is a strong suit of Linux.</p>
+<p>Keeping your OS up to date as well as your software is super important in terms of security. Bugs and vulnerabilities are discovered on a daily basis. Thus keeping one’s system as up to date as possible is a very good practice. Luckily for us this process is very simple with a package manager. Ubuntu alerts us anytime updates are available, at which point a single click is enough to download and update everything.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> Linux being a free OS, most software that comes with it is free as well. You won’t find Microsoft Word here, but rather LibreOffice.</p>
+<h2 id="customization">Customization</h2>
+<p>Linux is extremely customizable. It is the kind of mindset that comes with free software and that allowed so many distributions to surface. The same is happening at the software level. Furthermore those can be configured with a lot of granularity. If you are ready to take the trouble to do it, you can craft a unique experience that caters exactly for your needs. For instance Ubuntu comes by default with the Gnome desktop environment. But it is possible to change it. A desktop environment can control the way windows display, how to search for and run software, and even more. Beyond a simple theme, this can change the full user experience of a desktop!</p>
+<figure>
+<img src="../images/ubuntu_kde_plasma_desktop.jpg" alt="KDE Plasma desktop environment" /><figcaption aria-hidden="true">KDE Plasma desktop environment</figcaption>
+</figure>
+<p>Another striking example: Linux has been supporting virtual desktops for many years now.</p>
+<p><img src="../images/info.png" class="icon" alt="Info" /> This functionality is called <em>Workspaces</em> under Ubuntu and is available by clicking on <em>Activities</em> on the top left. You can then move windows from desktop to desktop (displayed on the right) or switch desktop.</p>
+<h2 id="the-command-line">The command line</h2>
+<p>When tinkering with Linux and following tutorials one can quickly end up facing having to type some command line in the terminal. But what is this? Well, the command line is in fact another way to communicate with a computer than clicking on buttons. For example Firefox can be launched by clicking on its icon, or by opening a terminal and typing <code>firefox</code>. In Linux the command line is very powerful and often goes beyond what a simple interface allows you to do. I recommend the most curious of you to explore the subject. I might do a dedicated article about it in the future.</p>
+<figure>
+<img src="../images/ubuntu_terminal.jpg" alt="Ubuntu’s terminal" /><figcaption aria-hidden="true">Ubuntu’s terminal</figcaption>
+</figure>
+<h2 id="conclusion">Conclusion</h2>
+<p>Rather than passively use your default OS, why not give Linux a try? As described it is possible to try it without much difficulty. Software and system management is greatly simplified compared to other operating systems. Once familiar with Linux, one can start customizing it or even try other distributions. But above all Linux is free (as in free software) and community powered! Given that an OS is in total control of a computer, Linux is a refreshing option compared to proprietary alternatives. Finally if you liked my <a href="https://ghelouis.fr/en/what-is-free-software">previous article</a>, Linux is a good way to use and discover a great number of free software.</p>
+<h2 id="going-further">Going further</h2>
+<ul>
+<li>A similar more advanced tutorial (fr): <a href="https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux">https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux</a></li>
+<li>A bit more details on what constitutes Linux and how it was created: <a href="https://www.debian.org/releases/stable/amd64/ch01s02.en.html">https://www.debian.org/releases/stable/amd64/ch01s02.en.html</a></li>
+</ul>
+<footer class="footer">
+  <a id="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</footer>
+</body>
+</html>

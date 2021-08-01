@@ -1,0 +1,317 @@
+/* Goudy Initialen font for drop-caps */
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-A.ttf') format('truetype');
+    unicode-range: U+0041;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-B.ttf') format('truetype');
+    unicode-range: U+0042;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-C.ttf') format('truetype');
+    unicode-range: U+0043;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-D.ttf') format('truetype');
+    unicode-range: U+0044;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-E.ttf') format('truetype');
+    unicode-range: U+0045;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-F.ttf') format('truetype');
+    unicode-range: U+0046;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-G.ttf') format('truetype');
+    unicode-range: U+0047;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-H.ttf') format('truetype');
+    unicode-range: U+0048;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-I.ttf') format('truetype');
+    unicode-range: U+0049;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-J.ttf') format('truetype');
+    unicode-range: U+004A;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-K.ttf') format('truetype');
+    unicode-range: U+004B;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-L.ttf') format('truetype');
+    unicode-range: U+004C;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-M.ttf') format('truetype');
+    unicode-range: U+004D;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-N.ttf') format('truetype');
+    unicode-range: U+004E;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-O.ttf') format('truetype');
+    unicode-range: U+004F;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-P.ttf') format('truetype');
+    unicode-range: U+0050;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-Q.ttf') format('truetype');
+    unicode-range: U+0051;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-R.ttf') format('truetype');
+    unicode-range: U+0052;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-S.ttf') format('truetype');
+    unicode-range: U+0053;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-T.ttf') format('truetype');
+    unicode-range: U+0054;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-U.ttf') format('truetype');
+    unicode-range: U+0055;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-V.ttf') format('truetype');
+    unicode-range: U+0056;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-W.ttf') format('truetype');
+    unicode-range: U+0057;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-X.ttf') format('truetype');
+    unicode-range: U+0058;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-Y.ttf') format('truetype');
+    unicode-range: U+0059;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Goudy Initialen';
+    src: url('fonts/GoudyInitialen-Z.ttf') format('truetype');
+    unicode-range: U+005A;
+    font-display: swap;
+}
+
+
+body {
+  line-height: 1.5;
+  padding: 1em 1em 0 1em;
+  margin: auto;
+  max-width: 42em;
+  background: #fefefe;
+}
+
+h1 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+  outline: none;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+a.social {
+  text-decoration: none;
+}
+
+.fab, .fas {
+  color: black;
+  margin-right: 0.3em;
+}
+
+i.fab:hover, i.fas:hover {
+  color: #595959;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  text-align: center;
+}
+
+blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+.date {
+  text-align: right;
+  font-size: small;
+}
+
+#header {
+  color: black;
+  text-decoration: none;
+  line-height: 0;
+}
+
+#rss {
+  width: 15px;
+  margin-left: 1em;
+}
+
+#subheader {
+  text-align: right;
+  float: right;
+}
+
+.footer {
+  text-align: center;
+  font-size: x-small;
+}
+
+.heart {
+  margin-top: 50px;
+  text-align: center;
+  font-size: x-small;
+}
+
+.post-date {
+    font-size: x-small;
+}
+
+figcaption {
+  font-size: small;
+}
+
+.icon {
+  vertical-align: middle;
+  height: 28px;
+  width: 28px;
+}
+
+
+#figtable table,
+#figtable th,
+#figtable td {
+  border:0px solid transparent;
+}
+
+#figtable table {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 15px;
+}

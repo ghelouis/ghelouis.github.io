@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Guillaume Hélouis" />
+  <title>Pocket Chef</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fontawesome.min.css" />
+</head>
+<body>
+<a id="header" href="https://ghelouis.fr">Blog de Guillaume</a>
+<div id="subheader">
+  <a href="https://framapiaf.org/@guigui" class="social" title="Mastodon">
+    <i class="fab fa-mastodon"></i>
+  </a>
+  <a href="https://github.com/ghelouis" class="social" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="feed.xml" title="RSS" class="social">
+    <i class="fas fa-rss"></i>
+  </a>
+  |
+  <a href="https://ghelouis.fr/projets" title="Projets">Projets</a>
+  |
+  <a href="https://ghelouis.fr/a-propos" title="À propos">À propos</a>
+  |
+  <a href="https://ghelouis.fr/en/pocketchef" hreflang="en" title="English">English</a>
+</div>
+<h1>Pocket Chef</h1>
+<p><img src="images/pocket_chef_icon.png" alt="Icône de Pocket Chef" /></p>
+<p>Une application de gestion de recettes, disponible sur <a href="https://play.google.com/store/apps/details?id=fr.ghelouis.pocketchef">Android</a> et <a href="https://apps.apple.com/us/app/pocket-chef/id1536915775#?platform=iphone">iOS</a>.</p>
+
+<p>J'ai réalisé Pocket Chef sur mon temps libre, ayant toujours voulu créer ma
+propre application. J'aime bien cuisiner et noter à droite à gauche les
+recettes glanées ça et là sur le net ou par bouche à oreille. Le résultat étant
+une série de notes éparpillées sur papier, mon ordinateur et mon téléphone
+l'idée de Pocket Chef a commencé à germer dans mon esprit.</p>
+<p>Pocket Chef permet à un utilisateur d'écrire et conserver ses recettes en
+permanence sur lui-même. Un accent particulier est apporté au respect et à
+l'interopérabilité des données.</p>
+
+<h2>Fonctionnalités</h2>
+<ul>
+  <li>Attacher une ou plusieurs photos à une recette</li>
+  <li>Sections dédiées aux ingrédients, étapes de préparation, ustensiles et notes</li>
+  <li>Nombre de personnes adaptable (multiplie la quantité des ingrédients)</li>
+  <li>Export/import d'une recette</li>
+  <li>Disponible en français et en anglais (s'adapte à la langue du téléphone)</li>
+  <li>Aucune connexion à internet n'est requise, le contenu se trouve uniquement sur le téléphone</li>
+</ul>
+
+<h2>Une application ouverte et respectueuse de l'utilisateur</h2>
+<p>Le contrôle de l'utilisateur sur ses propres données (en l'occurrence ses
+recettes) est un sujet qui me tient à cœur. Ainsi avec Pocket Chef tout se
+déroule sur le téléphone, rien n'est envoyé sur internet ni collecté. De plus
+une recette peut facilement être exportée ou importée dans un format extrêmement
+simple et lisible par n'importe qui (fichier texte, cf le <a
+  href="https://github.com/ghelouis/pocketchef/wiki/Recipe-format">wiki</a> du
+projet pour plus de détails à ce sujet).</p>
+<p>Cette faculté offre de nombreuses possibilités et une grande liberté à
+l'utilisateur. Ainsi une recette peut facilement être partagée avec quelqu'un
+d'autre et même modifiée en dehors de Pocket Chef. L'application se révèle un
+outil au service de l'utilisateur, et non un écosystème fermé dont il est
+impossible de s'extraire.</p>
+
+<h2>Architecture</h2>
+<p>Pocket Chef est écrit entièrement en Javascript (React Native) avec <a
+  href="https://expo.io/">Expo</a>.  Les données sont stockées localement dans
+une base de données SQLite. Expo permet de n'avoir à écrire aucun code
+spécifique à une plateforme particulière.</p>
+
+<h2>Code Source</h2>
+<p>Pocket Chef est un logiciel libre et son code source est accessible sur mon github à cette
+adresse: <a href="https://github.com/ghelouis/pocketchef">https://github.com/ghelouis/pocketchef</a>.</p>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Guillaume Hélouis" />
+  <title>Osez Linux !</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fontawesome.min.css" />
+  <link rel="stylesheet" href="styles/article.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<a id="header" href="https://ghelouis.fr">Blog de Guillaume</a>
+<div id="subheader">
+  <a href="https://framapiaf.org/@guigui" class="social" title="Mastodon">
+    <i class="fab fa-mastodon"></i>
+  </a>
+  <a href="https://github.com/ghelouis" class="social" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="feed.xml" title="RSS" class="social">
+    <i class="fas fa-rss"></i>
+  </a>
+  |
+  <a href="https://ghelouis.fr/projets" title="Projets">Projets</a>
+  |
+  <a href="https://ghelouis.fr/a-propos" title="À propos">À propos</a>
+  |
+  <a href="https://ghelouis.fr/en/give-linux-a-try" hreflang="en" title="English">English</a>
+</div>
+<header id="title-block-header">
+<h1 class="title">Osez Linux !</h1>
+<p class="date">10 avril 2020</p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Dans cet article je vais parler du système d’exploitation <a href="https://ghelouis.fr/le-logiciel-libre-kesaco">libre</a> et gratuit GNU/Linux, communément appelé Linux. Nous allons voir que cet équivalent à Windows n’est pas compliqué et comporte bon nombre d’avantages. En particulier Linux apporte l’agréable satisfaction de comprendre et de maîtriser son ordinateur. Si cela vous intéresse, continuez votre lecture !</p>
+<figure>
+<img src="images/tux.png" width="110" height="130" alt="Tux, la mascotte de Linux" /><figcaption aria-hidden="true">Tux, la mascotte de Linux</figcaption>
+</figure>
+<h2 id="les-os">Les OS</h2>
+<p>Mais qu’est-ce donc qu’un système d’exploitation (ou OS, de l’anglais Operating System) ? C’est le programme principal installé par défaut sur un ordinateur et qui se lance au démarrage. C’est l’OS qui fait le lien entre le matériel physique (clavier, souris, écran) et les logiciels d’un ordinateur. On peut voir ça comme le maître absolu, qui décide si tel programme a le droit de se lancer, et si tel appui sur telle touche va déclencher une action. Les systèmes d’exploitation les plus connus sont macOS d’Apple et Windows de Microsoft. Ceux-ci sont propriétaires, c’est-à-dire que le code source de chacun est gardé secret par chaque entreprise. À l’opposé, Linux est <a href="https://ghelouis.fr/le-logiciel-libre-kesaco">libre</a> et donc ouvert, modifiable et maintenu par toute une communauté.</p>
+<h2 id="linux-aujourdhui">Linux aujourd’hui</h2>
+<p>Même si moins connu du grand public, Linux est omniprésent dans le monde de l’informatique. C’est notamment l’OS majoritaire sur les serveurs, ces ordinateurs connectés en permanence à internet et qui permettent au web de fonctionner. L’OS pour smartphone Android est lui aussi basé sur Linux.</p>
+<h2 id="les-distributions">Les distributions</h2>
+<p>C’est également parce que Linux est libre qu’il existe aujourd’hui de nombreuses déclinaisons (on parle de distributions) de cet OS. Chacun pouvant effectuer des modifications à sa guise, on a de nos jours une centaine de distributions, chacune avec sa philosophie propre. En voici quelques exemples:</p>
+<ul>
+<li><a href="https://www.debian.org/index.fr.html">Debian</a>: stabilité avant tout. Privilégie les logiciels robustes et matures. Les toutes dernières fonctionnalités peuvent mettre plus de temps à arriver.</li>
+<li><a href="https://archlinux.fr/">Arch Linux</a>: minimalisme et simplicité. Excellente documentation. L’utilisateur est encouragé à mettre en place et configurer les logiciels dont il a besoin lui-même.</li>
+<li><a href="https://ubuntu.com/desktop">Ubuntu</a>: distribution la plus facile d’approche et une des plus populaire. Très semblable à Windows et macOS.</li>
+</ul>
+<div id="figtable">
+<table>
+<thead>
+<tr class="header">
+<th><img src="images/logo_debian_94.png" width="64" height="64" alt="Logo de Debian" /></th>
+<th><img src="images/logo_arch_linux_167.png" width="64" height="64" alt="Logo d’Arch Linux" /></th>
+<th><img src="images/logo_ubuntu_64.png" alt="Logo d’Ubuntu" /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logo de Debian</td>
+<td>Logo d’Arch Linux</td>
+<td>Logo d’Ubuntu</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="images/info.png" class="icon" alt="Info" /> Ubuntu est en fait basé sur Debian. <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#/media/File:Linux_Distribution_Timeline.svg">L’arbre généalogique</a> des distributions Linux est assez impressionnant !</p>
+<p>Par la suite nous nous focaliserons sur Ubuntu. Cette distribution étant très utilisée, il est facile de trouver des réponses à son sujet sur internet. Néanmoins la plupart des grands principes restent les mêmes et la suite de cet article peut facilement s’appliquer à n’importe quelle distribution.</p>
+<h2 id="soyez-curieux">Soyez curieux</h2>
+<p>Petit aparté avant d’entrer dans le vif du sujet. Pour bénéficier pleinement de Linux et plus généralement dans l’informatique voir dans la vie, <strong>il faut avoir l’esprit curieux</strong>. En cette ère où la moindre connaissance est à une recherche Google de distance, s’en priver est réellement un choix. Je recommande fortement de ne pas suivre des tutoriels aveuglément mais d’essayer de réellement comprendre ce que l’on fait et pourquoi. J’avais déjà à cœur dans mon <a href="https://ghelouis.fr/le-logiciel-libre-kesaco">premier article</a> de vous pousser au maximum à avoir un <strong>esprit critique</strong>.</p>
+<p>Bref. Reprenons :)</p>
+<h2 id="installation-dubuntu">Installation d’Ubuntu</h2>
+<p>Pour installer un nouvel OS sur son ordinateur, plusieurs choix s’offrent à nous:</p>
+<ul>
+<li>Remplacer l’OS actuel par celui-ci. La solution la plus radicale;</li>
+<li>L’installer en parallèle (Dual Boot). On peut alors choisir au démarrage sur quel OS continuer;</li>
+<li>Utiliser un machine virtuelle, c’est-à-dire un programme qui va simuler un ordinateur entier. La solution la plus simple.</li>
+</ul>
+<p>Pour vous familiariser un peu avec Ubuntu je vous recommande de commencer par cette dernière étape. Cependant c’est en forgeant que l’on devient forgeron. Si une machine virtuelle est pratique pour de la découverte, un dual boot et un usage quotidien vous apportera beaucoup plus de de familiarité. Enfin si vous êtes conquis il ne vous restera plus qu’à effacer l’OS original !</p>
+<h3 id="installer-virtualbox">Installer VirtualBox</h3>
+<p>Installons maintenant Ubuntu dans une machine virtuelle (ou VM de l’anglais Virtual Machine) sans quitter notre OS actuel.</p>
+<ol type="1">
+<li>Téléchargez et installez VirtualBox: cliquez <a href="https://www.virtualbox.org/wiki/Downloads">ici</a> puis sur <em>Windows hosts</em> si vous êtes sous Windows ou <em>OS X hosts</em> si vous avez un Mac. Procédez à l’installation.</li>
+<li>Téléchargez une image d’Ubuntu <a href="https://ubuntu.com/download/desktop">ici</a> (fichier iso).</li>
+<li>Lancez VirtualBox et créez une nouvelle machine virtuelle de type <em>Linux</em> et de version <em>Ubuntu (64-bit)</em>.</li>
+<li>Lancez la VM. Au premier démarrage il vous sera demandé de choisir le <em>disque optique virtuel</em>. Choisissez l’image d’Ubuntu préalablement téléchargée.</li>
+<li>Suivez le processus d’installation d’Ubuntu. Vous pouvez choisir n’importe quelles options sans risques, tout se déroule dans la machine virtuelle. Au pire il est toujours possible de supprimer la VM et de recommencer.</li>
+<li>Si tout va bien vous devez au final pouvoir vous identifier et accéder au bureau.</li>
+</ol>
+<figure>
+<img src="images/ubuntu_desktop.jpg" alt="Bureau d’Ubuntu" /><figcaption aria-hidden="true">Bureau d’Ubuntu</figcaption>
+</figure>
+<h2 id="le-gestionnaire-de-paquets">Le gestionnaire de paquets</h2>
+<p>L’une de mes fonctionnalités préférée présente dans toutes les distributions Linux est le gestionnaire de paquets. Ce dernier est un programme qui permet de gérer l’installation de logiciels et de faire des mises à jour en toute facilité. Le concept est similaire aux App Store que l’on retrouve pour les smartphone. C’est une gestion bien plus sécurisée que sur d’autres OS, où l’on se retrouve souvent à télécharger des logiciels depuis divers sites plus ou moins fiables.</p>
+<p><img src="images/info.png" class="icon" alt="Info" /> Si vous téléchargez un programme sans gestionnaire de paquets, veillez toujours à le faire depuis le site web officiel de ce programme.</p>
+<p>La liste des logiciels disponibles via un gestionnaire de paquets est entretenue par les mainteneurs de la distribution. Sous Ubuntu <em>Logiciels Ubuntu</em> permet de gérer ses logiciels. Cette application permet d’utiliser en arrière-plan le gestionnaire de paquets d’Ubuntu <em>apt</em>.</p>
+<p><img src="images/info.png" class="icon" alt="Info" /> La gestion unifiée des logiciels et des mises à jour de l’OS est un des points forts de Linux.</p>
+<p>Garder son OS à jour ainsi que ses logiciels est très important en terme de sécurité. De nouvelles failles de sécurité sont découvertes tous les jours. Ainsi garder son système le plus à jour possible est une excellente pratique en terme d’hygiène numérique. Heureusement pour nous ce processus est simplissime avec un gestionnaire de paquets. Ainsi Ubuntu nous alerte lorsque des mises à jour sont disponibles, puis un clique suffit à tout télécharger et installer.</p>
+<p><img src="images/info.png" class="icon" alt="Info" /> Linux étant un OS libre, la plupart des logiciels que l’on retrouve avec le sont également. Point de Microsoft Word ici, mais plutôt LibreOffice.</p>
+<h2 id="personnalisation">Personnalisation</h2>
+<p>Linux est extrêmement personnalisable. C’est l’esprit qui vient avec les logiciels libres, et qui a permis à autant de distributions d’émerger. La même chose se produit au niveau de simples logiciels. De plus il est possible de configurer ceux-ci avec beaucoup de finesse. Si l’on s’en donne la peine, on peut donc avoir une expérience totalement personnalisée qui correspond exactement à ses envies. Par exemple Ubuntu vient par défaut avec l’environnement de bureau Gnome. Mais il est possible d’en changer. Un environnement de bureau peut contrôler la façon dont les fenêtres s’arrangent, comment chercher et lancer un logiciel, et plus encore. Au delà d’un simple thème, ceci change l’expérience d’utilisation d’un bureau !</p>
+<figure>
+<img src="images/ubuntu_kde_plasma_desktop.jpg" alt="Environnement de bureau KDE Plasma" /><figcaption aria-hidden="true">Environnement de bureau KDE Plasma</figcaption>
+</figure>
+<p>Un exemple marquant: Linux supporte d’avoir des bureaux virtuels depuis de très nombreuses années.</p>
+<p><img src="images/info.png" class="icon" alt="Info" /> Cette fonctionnalité se nomme <em>Espaces de travail</em> sous Ubuntu et est accessible en cliquant sur <em>Activités</em> en haut à gauche. Il est alors possible de bouger ses fenêtres de bureaux à bureaux (affichés à droite) ou de changer de bureau.</p>
+<h2 id="ligne-de-commande">Ligne de commande</h2>
+<p>En bidouillant Linux et en suivant des tutoriels on se retrouve assez rapidement à devoir taper une commande dans le terminal. Mais qu’est-ce que c’est que cette bête là ? La ligne de commande est en fait un autre moyen de communiquer avec un ordinateur que de cliquer sur des boutons. Par exemple Firefox peut être lancé en cliquant sur son icône, ou bien en ouvrant un terminal et en écrivant <code>firefox</code>. Sous Linux, la ligne de commande est très puissante et permet bien souvent d’aller au-delà de ce qu’il est possible de faire avec une simple interface. Je recommande aux plus curieux d’entre vous d’explorer le sujet. J’en ferais peut-être un article dédié dans le futur.</p>
+<figure>
+<img src="images/ubuntu_terminal.jpg" alt="Le terminal d’Ubuntu" /><figcaption aria-hidden="true">Le terminal d’Ubuntu</figcaption>
+</figure>
+<h2 id="conclusion">Conclusion</h2>
+<p>Plutôt que de subir l’OS installé par défaut sur son ordinateur, pourquoi ne pas se pencher vers Linux ? Comme nous l’avons vu il est possible de l’essayer sans grande difficulté. La gestion des logiciels et du système est grandement simplifiée par rapport à d’autres OS. Une fois familier avec Linux, on peut se mettre à personnaliser certains aspects, voir même essayer une autre distribution. Mais surtout Linux est gratuit, libre et communautaire ! L’OS possédant le contrôle total d’un ordinateur, il est satisfaisant de pouvoir se reposer sur Linux plutôt que sur d’autres alternatives propriétaires. Enfin si mon <a href="/le-logiciel-libre-kesaco">article précédent</a> vous a plu, Linux est un bon moyen d’utiliser et de découvrir un grand nombre de logiciels libres.</p>
+<h2 id="aller-plus-loin">Aller plus loin</h2>
+<ul>
+<li>Un tutoriel similaire plus poussé: <a href="https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux">https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux</a></li>
+<li>Un peu plus de détais sur comment fonctionne Linux et sur qui l’a créé: <a href="https://www.debian.org/releases/stable/amd64/ch01s02.fr.html">https://www.debian.org/releases/stable/amd64/ch01s02.fr.html</a></li>
+</ul>
+<footer class="footer">
+  <a id="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</footer>
+</body>
+</html>
