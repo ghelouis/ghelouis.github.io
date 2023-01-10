@@ -8,10 +8,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="icon" type="image/png" href="/favicon.png" />
@@ -25,8 +30,8 @@
 <body>
 <a id="header" href="https://ghelouis.fr">Blog de Guillaume</a>
 <div id="subheader">
-  <a href="https://framapiaf.org/@guigui" class="social" title="Mastodon">
-    <i class="fab fa-mastodon"></i>
+  <a href="https://twitter.com/y0mgui" class="social" title="Twitter">
+    <i class="fab fa-twitter"></i>
   </a>
   <a href="https://github.com/ghelouis" class="social" title="Github">
     <i class="fab fa-github"></i>
@@ -46,23 +51,58 @@
 <p class="date">17 mai 2020</p>
 </header>
 <figure>
-<img src="images/jim_carrey_typing.gif" width="350" alt="Technique parfaitement maîtrisée par Jim Carrey" /><figcaption aria-hidden="true">Technique parfaitement maîtrisée par Jim Carrey</figcaption>
+<img src="images/jim_carrey_typing.gif" width="350"
+alt="Technique parfaitement maîtrisée par Jim Carrey" />
+<figcaption aria-hidden="true">Technique parfaitement maîtrisée par Jim
+Carrey</figcaption>
 </figure>
 <h2 id="introduction">Introduction</h2>
-<p>Utiliser ses dix doigts pour écrire du texte sur un ordinateur permet de taper rapidement et de ne pas avoir à regarder son clavier. Je recommande vivement cette pratique à tous ceux qui utilisent un ordinateur quotidiennement. Travaillant dans l’informatique, je suis souvent étonné du faible nombre de personnes sachant taper ainsi. J’ai moi-même découvert cette technique pourtant éprouvée un peu par hasard !</p>
+<p>Utiliser ses dix doigts pour écrire du texte sur un ordinateur permet
+de taper rapidement et de ne pas avoir à regarder son clavier. Je
+recommande vivement cette pratique à tous ceux qui utilisent un
+ordinateur quotidiennement. Travaillant dans l’informatique, je suis
+souvent étonné du faible nombre de personnes sachant taper ainsi. J’ai
+moi-même découvert cette technique pourtant éprouvée un peu par hasard
+!</p>
 <h2 id="inconvénients">Inconvénients</h2>
-<p>Cette technique nécessite une durée d’apprentissage de l’ordre de quelques semaines pour être vraiment à l’aise. Cependant cet effort sera très vite rentabilisé et d’autant plus court si vous utilisez un ordinateur tous les jours. Bientôt le clavier deviendra une extension de votre corps !</p>
+<p>Cette technique nécessite une durée d’apprentissage de l’ordre de
+quelques semaines pour être vraiment à l’aise. Cependant cet effort sera
+très vite rentabilisé et d’autant plus court si vous utilisez un
+ordinateur tous les jours. Bientôt le clavier deviendra une extension de
+votre corps !</p>
 <h2 id="avantages">Avantages</h2>
-<p>Les dix doigts sont utilisés de manière uniforme à travers toutes les touches du clavier. Ceci permet de moins bouger les poignets. De même le regard n’a pas à faire des aller-retours entre le clavier et l’écran, permettant de rester concentré et de réduire les mouvements du cou. Ainsi cette méthode est <strong>ergonomique</strong> et fait gagner en <strong>productivité</strong>.</p>
+<p>Les dix doigts sont utilisés de manière uniforme à travers toutes les
+touches du clavier. Ceci permet de moins bouger les poignets. De même le
+regard n’a pas à faire des aller-retours entre le clavier et l’écran,
+permettant de rester concentré et de réduire les mouvements du cou.
+Ainsi cette méthode est <strong>ergonomique</strong> et fait gagner en
+<strong>productivité</strong>.</p>
 <h2 id="technique">Technique</h2>
 <figure>
-<img src="images/hands_and_azerty.jpg" title="Derivative work of https://commons.wikimedia.org/wiki/File:Clavier-Azerty.svg by Yitscar" alt="Chaque touche correspond à un doigt bien précis" /><figcaption aria-hidden="true">Chaque touche correspond à un doigt bien précis</figcaption>
+<img src="images/hands_and_azerty.jpg"
+title="Derivative work of https://commons.wikimedia.org/wiki/File:Clavier-Azerty.svg by Yitscar"
+alt="Chaque touche correspond à un doigt bien précis" />
+<figcaption aria-hidden="true">Chaque touche correspond à un doigt bien
+précis</figcaption>
 </figure>
-<p>L’idée est de toujours taper sur la même touche avec le même doigt, le tout sans regarder son clavier. Au repos les mains sont sur la rangée du milieu. Le clavier possède en générale deux encoches sur le <code>F</code> et le <code>J</code> pour le placement des index de la main gauche et de la main droite respectivement.</p>
+<p>L’idée est de toujours taper sur la même touche avec le même doigt,
+le tout sans regarder son clavier. Au repos les mains sont sur la rangée
+du milieu. Le clavier possède en générale deux encoches sur le
+<code>F</code> et le <code>J</code> pour le placement des index de la
+main gauche et de la main droite respectivement.</p>
 <h2 id="ressources">Ressources</h2>
-<p>Je vous recommande <a href="https://www.typingclub.com/">Typing Club</a>, très bon site avec lequel j’ai tout appris. Les exercices interactifs permettent de mémoriser la position des touches progressivement. N’oubliez pas de bien configurer le site à utiliser votre type de clavier. Internet regorge également de jeux comme par exemple <a href="https://play.typeracer.com/">Type Racer</a>.</p>
+<p>Je vous recommande <a href="https://www.typingclub.com/">Typing
+Club</a>, très bon site avec lequel j’ai tout appris. Les exercices
+interactifs permettent de mémoriser la position des touches
+progressivement. N’oubliez pas de bien configurer le site à utiliser
+votre type de clavier. Internet regorge également de jeux comme par
+exemple <a href="https://play.typeracer.com/">Type Racer</a>.</p>
 <h1 id="conclusion">Conclusion</h1>
-<p>Une fois la technique comprise, il faut veiller à se forcer à taper correctement dès que l’on utilise un clavier. Ce sera laborieux au début, mais vous ne pourrez que progresser ! Au fur et à mesure taper deviendra un réflexe mécanique et il vous suffira de penser à un mot pour que vos doigts le tapent.</p>
+<p>Une fois la technique comprise, il faut veiller à se forcer à taper
+correctement dès que l’on utilise un clavier. Ce sera laborieux au
+début, mais vous ne pourrez que progresser ! Au fur et à mesure taper
+deviendra un réflexe mécanique et il vous suffira de penser à un mot
+pour que vos doigts le tapent.</p>
 <footer class="footer">
   <a id="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
 </footer>

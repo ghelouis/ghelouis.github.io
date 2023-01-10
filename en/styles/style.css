@@ -278,6 +278,10 @@ blockquote {
   font-size: x-small;
 }
 
+.aboutimg {
+  border-radius: 5px;
+}
+
 .post-date {
     font-size: x-small;
 }
