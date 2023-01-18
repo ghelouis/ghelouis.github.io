@@ -29,3 +29,9 @@ in `~/.ideavimrc` (see [https://github.com/JetBrains/ideavim](https://github.com
 `:TableModeEnable`/`:TableModeDisable`
 
 `|` will format the line
+
+## Spellcheck
+
+- `:set spell spelllang=fr`: turn on (not always great for non-english languages)
+- `:set nospell`: turn off
+- `z=`: list spelling suggestions
