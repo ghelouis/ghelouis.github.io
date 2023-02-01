@@ -1,4 +1,4 @@
-Source of https://ghelouis.fr
+Source of https://ghelouis.fr.
 
 My blog is currently generated from markdown files using a home-made script.
 It's little more than a wrapper around [pandoc](https://pandoc.org/) plus a few
