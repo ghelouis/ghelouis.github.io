@@ -282,6 +282,28 @@ blockquote {
   border-radius: 5px;
 }
 
+.bonus {
+  position: relative;
+}
+
+.bonus a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  cursor: default;
+}
+
+.bonus:hover img {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.bonus:hover a {
+  color: #0366d6;
+  cursor: pointer;
+}
+
 .post-date {
     font-size: x-small;
 }
