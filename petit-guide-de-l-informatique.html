@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Guillaume Hélouis" />
+  <title>Petit guide de l'informatique</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fontawesome.min.css" />
+  <link rel="stylesheet" href="styles/article.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<a id="header" href="https://ghelouis.fr">Blog de Guillaume</a>
+<!-- Bonjour petit être curieux :) voici un cookie 🍪 -->
+<div id="subheader">
+  <a href="mailto:mail@ghelouis.fr" class="social" title="E-Mail">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://twitter.com/y0mgui" class="social" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://github.com/ghelouis" class="social" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="feed.xml" title="RSS" class="social">
+    <i class="fas fa-rss"></i>
+  </a>
+  |
+  <a href="https://ghelouis.fr/projets" title="Projets">Projets</a>
+  |
+  <a href="https://ghelouis.fr/aventures" title="Aventures">Aventures</a>
+
+  |
+  <a href="https://ghelouis.fr/a-propos" title="À propos">À propos</a>
+  |
+  <a href="https://ghelouis.fr/en/small-it-survival-guide" hreflang="en" title="English">English</a>
+</div>
+<header id="title-block-header">
+<h1 class="title">Petit guide de l'informatique</h1>
+<p class="date">02 juin 2023</p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Petit (ou pas) guide, conseils, et bonnes pratiques pour survivre
+dans le monde numérique.</p>
+<p>Cette page sera mise à jour régulièrement.</p>
+<p><br></p>
+<h2 id="internet">Internet</h2>
+<p>Navigateur web (<a
+href="https://www.mozilla.org/fr/firefox/browsers/what-is-a-browser/">qu’est-ce
+que c’est ?</a>) conseillé :</p>
+<ul>
+<li><a href="https://www.mozilla.org/fr/firefox/new/">Firefox</a>.
+Open-source et maintenu par l’organisation à but non lucratif Mozilla.
+Respectueux de la vie privée des utilisateurs et supporte les formats
+ouverts du web. En bonus j’aime beaucoup le <a
+href="https://support.mozilla.org/fr/kb/retirer-tout-le-superflu-des-pages-web-grace-au-mode-lecture">mode
+lecture</a> qui n’affiche que le contenu textuel d’un site en enlevant
+tout le fatras superflu qui est hélas si commun de nos jours. Le thème
+minimaliste de mon blog en est d’ailleurs grandement inspiré.</li>
+</ul>
+<p>Extensions conseillées :</p>
+<ul>
+<li><a
+href="https://addons.mozilla.org/fr/firefox/addon/ublock-origin/">uBlock
+Origin</a>, un bloqueur de pub open-source, indispensable de nos jours.
+À ne pas confondre avec la myriade de clones moindres qui existent;</li>
+<li><a
+href="https://addons.mozilla.org/fr/firefox/addon/multi-account-containers/">Firefox
+Containers</a>. Permet de compartimenter ses comptes en ligne avec des
+onglets de code couleur. Très simple d’utilisation. Pratique pour éviter
+de se faire pister, il suffit de créer un conteneur et d’assigner un
+site à celui-ci pour qu’il s’ouvre toujours dedans. Les cookies sont
+alors propres au conteneur et invisibles en dehors. Personnellement je
+l’utilise pour tous les sites où je dois me connecter (par exemple
+Facebook ou Google). Pratique aussi pour utiliser deux comptes à la fois
+(par exemples deux adresses Gmail).</li>
+</ul>
+<h3 id="cookies-et-navigation-privée">Cookies et navigation privée</h3>
+<p>La plupart des sites web utilisent des techniques telles que les
+cookies pour vous traquer et proposer de la publicité ciblée. Pour mon
+utilisation j’aime naviguer en privé par défaut. Ici les cookies sont
+temporaires et effacés à la fermeture du navigateur. Si j’ai besoin de
+conserver des pages ouvertes à travers plusieurs sessions et de les
+garder dans mon historique j’utilise la navigation normale. Enfin pour
+les sites où je préfère rester connecté à un compte je me sers de
+l’extension Firefox Containers mentionnée ci-dessus (un conteneur par
+site).</p>
+<p>Attention, aucune de ces méthodes n’est infaillible. Le pistage
+d’utilisateurs en ligne est un constant jeu de chat et de la souris, ce
+pourrait être le sujet d’un article à part entière. Vous pouvez être
+traqués sans jamais vous connecter, simplement en recoupant les
+informations transmises par votre navigateur pour en faire une empreinte
+unique (taille de l’écran, extensions installées… ). Recherchez le sujet
+«browser fingerprinting» pour en savoir plus.</p>
+<h2 id="mots-de-passe">Mots de passe</h2>
+<ul>
+<li>Au moins 10 ou 12 caractères de long avec idéalement quelques
+majuscules et caractères spéciaux</li>
+<li>Avoir un mot de passe différent pour chaque site ou service</li>
+</ul>
+<p>Quelques approches :</p>
+<ul>
+<li>Méthode 1 : utiliser un gestionnaire de mots de passe tel que <a
+href="https://keepassxc.org/">KeePass</a>. Permet de générer de longs
+mots de passe aléatoires et de n’avoir à se souvenir que de son mot de
+passe principal.</li>
+<li>Méthode 2 : utiliser un mot de passe général et un petit algorithme
+appliqué à chaque site ou service. Par exemple entourer des deux
+premières lettres du site décalées d’un cran arrière et avant dans
+l’alphabet : <code>topSecret007</code> + <code>gmail</code> =
+<code>FLtopSecret007HN</code>. Pour Facebook le mot de passe devient
+<code>EZtopSecret007GB</code>. Laissez libre cours à votre imagination
+:)</li>
+</ul>
+<h2 id="fa-double-facteur-dauthentification">2FA (double facteur
+d’authentification)</h2>
+<ul>
+<li>À activer dès que possible et particulièrement sur ses comptes les
+plus précieux;</li>
+<li>Privilégier le scan d’un QR code qui génère un pin aléatoire
+tournant (on parle de TOTP, Time-based One-Time Password). Permet de ne
+pas être bloqué à l’étranger si on se retrouve dans l’incapacité de
+recevoir un SMS;</li>
+<li>Applis mobiles TOTP conseillées : Google Authenticator, Authy ou
+bien encore Aegis qui est open-source et permet de faire des sauvegardes
+facilement.</li>
+</ul>
+<h2 id="installer-un-logiciel">Installer un logiciel</h2>
+<p>Pour ne pas installer de virus ou autre malware, il est important de
+toujours obtenir un nouveau logiciel depuis une source sûre. Priviligiez
+son site officiel ou bien l’App Store de votre système d’exploitation.
+Les utilisateurs de Linux (dont je parle dans <a
+href="https://ghelouis.fr/osez-linux">cet article</a>) n’auront pas ce
+genre de soucis.</p>
+<p>Quand à la question du choix du logiciel parmi plusieurs
+alternatives, tout dépend de vos priorités : fonctionnalités, prix,
+interopérabilité ? Pour ma part j’ai tendance à opter pour ceux qui sont
+libres et open-source (j’ai expliqué ce que cela signifie <a
+href="https://ghelouis.fr/le-logiciel-libre-kesaco">ici</a>).</p>
+<h2 id="sauvegardes-pc">Sauvegardes (PC)</h2>
+<p>Personne n’est à l’abri d’un vol, d’une tasse de café renversée ou
+tout simplement d’un disque dur qui rend l’âme. Mieux vaut donc se
+prémunir plutôt que de le regretter après coup.</p>
+<ul>
+<li>Faire une sauvegarde incrémentale et chiffrée régulière.
+Incrémentale : permet de n’avoir à sauvegarder que les changements une
+fois la première grosse sauvegarde effectuée. Chiffrée : quelqu’un ayant
+accès à cette sauvegarde ne pourra pas lire à son contenu.</li>
+<li>L’état de l’art consiste à avoir deux sauvegardes : chez soi (par
+exemple sur un disque dur) et à un endroit différent (par exemple dans
+le cloud). Mais une sauvegarde est déjà un bon début.</li>
+<li>Les outils sont ici très nombreux et vont dépendre de votre système
+d’exploitation, de vos préférences et de vos connaissances techniques.
+Je vous laisse effectuer vos propres recherches. Pour les curieux
+j’utilise <a href="https://www.borgbackup.org/">Borg</a> mais ce n’est
+probablement pas le plus adapté si vous n’êtes pas familiers avec la
+ligne de commande :)</li>
+<li>Toujours vérifier que sa sauvegarde est saine : récupérez un ficher
+de temps en temps pour être sûr que tout a fonctionné comme prévu.</li>
+</ul>
+<h2 id="bonnes-pratiques-de-sécurité">Bonnes pratiques de sécurité</h2>
+<p>Les conseils précédents permettent déjà d’avoir un contrôle correct
+sur sa vie numérique. Voici quelques astuces supplémentaires.</p>
+<ul>
+<li>Maintenir son système et ses logiciels à jour. En plus de nouvelles
+fonctionnalités, les mises à jour colmatent souvent des failles de
+sécurité;</li>
+<li>Ne pas brancher de clé USB inconnue (par exemple trouvée par
+terre);</li>
+<li>Ne jamais écrire ou partager ses mots de passe;</li>
+<li>En cas de situation étrange ou brusquement urgente mieux vaut
+prendre son temps pour vérifier. Un appel vous alerte de transactions
+frauduleuses au Nigéria ? On vous demande d’effectuer certaines actions
+ou bien de communiquer des informations personnelles ? En cas de doute
+mieux vaut rappeler vous-mêmes votre banque au numéro que vous savez
+être le bon.</li>
+<li>La plupart des arnaques et vols de mots de passe sont facilités par
+les utilisateurs eux-mêmes ! Toujours se méfier avant de partager des
+informations privées ou confidentielles. Les SMS ou emails contenant des
+liens frauduleux sont également un classique. Il est très facile de
+copier l’apparence d’un site entier et d’avoir une URL similaire ou
+d’apparence inoffensive (<a
+href="https://ghelouis.fr/perdu">mes-impots.fr</a> à la place d’<a
+href="https://www.impots.gouv.fr">impots.gouv.fr</a> par exemple). Dans
+le doute toujours se référer au site ou contact que vous savez être
+l’officiel.</li>
+</ul>
+<h2 id="smartphones-android">Smartphones (Android)</h2>
+<p>Je possède un Android, je vais donc parler de ce type de
+téléphone.</p>
+<ul>
+<li>Navigation web : Firefox + l’extension uBlock Origin. Mêmes
+avantages que listés plus haut. Permet aussi de jouer une vidéo YouTube
+avec un écran verrouillé.</li>
+<li>Pour les versions récentes d’Android il est possible de bloquer les
+autorisations et notifications dans les paramètres de chaque
+application. Pratique, ce genre de contrôle est en général restreint ou
+incomplet au sein des applications elles-mêmes.</li>
+<li>Faire des sauvegardes régulières s’applique ici aussi. Tout dépend
+de ce que vous souhaitez sauvegarder et comment. Par exemple mon
+application de contacts me permet de les exporter. Sauvegarder ses
+photos est aussi une bonne idée. Personnellement j’exporte tout ce
+auquel je tiens sur mon ordinateur. Ma sauvegarde de PC contient alors
+aussi celle de mon téléphone.</li>
+</ul>
+<h2 id="astuces-avancées">Astuces avancées</h2>
+<p>Firefox permet d’accéder à ses raccourcis par des mots clés
+personnalisés et même d’injecter des paramètres. Par exemple taper
+<code>y chatons</code> dans la barre d’adresse me permet de rechercher
+des vidéos de chatons sur YouTube avec la configuration suivante :</p>
+<ul>
+<li>Mot clé: <code>y</code></li>
+<li>URL:
+<code>https://www.youtube.com/results?search_query=%s</code></li>
+</ul>
+<p>Le <code>%s</code> est remplacé par ce qui est tapé après le mot clé,
+en l’occurrence <code>chatons</code>. J’ai un bon nombre de raccourcis
+de ce type, il suffit d’analyser l’URL. Un autre exemple que j’utilise
+fréquemment : <code>enfr something</code> et
+<code>fren quelque chose</code> pour traduire depuis ou vers l’anglais à
+l’aide du site <a
+href="https://www.wordreference.com">wordreference.com</a>. Ou bien
+encore <code>wiki quelque chose</code> pour effectuer un recherche sur
+Wikipédia.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Restez curieux de comment fonctionnent vos outils. L’informatique
+fait partie de notre quotidien, il est important de maîtriser les bases
+de cet univers aujourd’hui plus que jamais. Qui sait peut-être même que
+vous y prendriez goût :)</p>
+<h2 id="aller-plus-loin">Aller plus loin</h2>
+<ul>
+<li><a
+href="https://www.ssi.gouv.fr/particulier/">ssi.gouv.fr/particulier/</a>
+: Le site de l’ANSSI (Agence Nationale de la Sécurité et des Systèmes
+d’Information). Des formations et guides de très haute qualité, aussi
+bien pour professionnels que pour particuliers;</li>
+<li><a href="https://www.cnil.fr/">cnil.fr</a> : Le site de la CNIL
+(Commission Nationale de l’Informatique et des Libertés). Contient des
+bonnes ressources sur comment maîtriser ses données et sa vie privée en
+ligne;</li>
+<li><a
+href="https://www.jenesuispasunedata.fr/">jenesuispasunedata.fr</a> :
+Comprendre les données collectées par les géants du web;</li>
+<li><a href="https://youtu.be/6Jv0EzXdQbk">youtu.be/6Jv0EzXdQbk</a> :
+Enquête du sympathique youtubeur Micode sur le dessous des arnaques par
+SMS.</li>
+</ul>
+<footer class="footer">
+  <a rel="source" href="https://github.com/ghelouis/ghelouis.github.io">Source</a> – <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Guillaume Hélouis" />
+  <meta name="dcterms.date" content="2023-06-02" />
+  <title>Small IT survival guide</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fontawesome.min.css" />
+  <link rel="stylesheet" href="styles/article.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<a id="header" href="https://ghelouis.fr/en">Guillaume's blog</a>
+<!-- Hello curious little mind :) here's a cookie 🍪 -->
+<div id="subheader">
+  <a href="mailto:mail@ghelouis.fr" class="social" title="E-Mail">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://twitter.com/y0mgui" class="social" title="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://github.com/ghelouis" class="social" title="Github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="feed.xml" title="RSS" class="social">
+    <i class="fas fa-rss"></i>
+  </a>
+  |
+  <a href="https://ghelouis.fr/en/projects" title="Projects">Projects</a>
+  |
+  <a href="https://ghelouis.fr/en/about" title="About">About</a>
+  |
+  <a href="https://ghelouis.fr/petit-guide-de-l-informatique" hreflang="fr" title="français">français</a>
+</div>
+<header id="title-block-header">
+<h1 class="title">Small IT survival guide</h1>
+<p class="date">June 02, 2023</p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Small (or not) guide, tips and good practises to survive in the
+digital world.</p>
+<p>This page will be updated regularly.</p>
+<p><br></p>
+<h2 id="internet">Internet</h2>
+<p>Recommended web browser (<a
+href="https://www.mozilla.org/en-US/firefox/browsers/what-is-a-browser/">what
+is it?</a>):</p>
+<ul>
+<li><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.
+Open-source and maintained by the non-profit organisation Mozilla.
+Respectful of user’s privacy as well as open web standards. As a bonus I
+really like its <a
+href="https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages">reader
+view</a> which displays text content only from websites, thereby
+removing all that superfluous clutter sadly too common nowadays. My
+blog’s minimalist theme was greatly inspired by it.</li>
+</ul>
+<p>Recommended extensions:</p>
+<ul>
+<li><a
+href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock
+Origin</a>, an open-source adblocker, essential nowadays, not to be
+confused with the myriad of lesser clones;</li>
+<li><a
+href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">Firefox
+Containers</a>. Enables compartmentalising online accounts in
+colour-coded tabs. Extremely simple to use. Useful to avoid being
+tracked, just create a container and assign it a website for it to
+always open inside. Cookies are then restricted to that container and
+invisible to the outside. I personally use it for all websites requiring
+me to log in (for instance Facebook or Google). It’s also useful to
+interact with multiple accounts at the same time (say two Gmail
+addresses).</li>
+</ul>
+<h3 id="cookies-and-private-browsing">Cookies and private browsing</h3>
+<p>Most websites use techniques such as cookies to track you and serve
+targeted advertising. I tend to browse privately by default. In this
+mode cookies are temporary and discarded when the browser is closed. If
+I need to keep pages open across multiple sessions and keep them in my
+history I use normal navigation. Finally for websites where I prefer to
+stay logged in I use the Firefox Containers extension mentioned above
+(one container per site).</p>
+<p>Beware, none of those techniques are foolproof. User tracking is a
+constant game of cat and mouse, it could be the topic of an entire
+article. You can be tracked without ever logging in to a website, simply
+by looking at the information transmitted by your browser and creating a
+unique fingerprint (screen dimensions, installed extensions…). Look up
+“browser fingerprinting” to find out more about this topic.</p>
+<h2 id="passwords">Passwords</h2>
+<ul>
+<li>Minimum 10 or 12 characters long with ideally a few uppercase
+letters and special characters</li>
+<li>Have a different password for each website or service</li>
+</ul>
+<p>A few techniques:</p>
+<ul>
+<li>Method 1: use a password manager such as <a
+href="https://keepassxc.org/">KeePass</a>. These can generate long
+random passwords and only require you to remember your master
+password.</li>
+<li>Method 2: use a single password coupled to a small algorithm that
+you’ll apply for each site or service. For example append a prefix from
+the first two letters of the website one step back in the alphabet and a
+suffix from the same letters one step forward: <code>topSecret007</code>
++ <code>gmail</code> = <code>FLtopSecret007HN</code>. For Facebook the
+password would be <code>EZtopSecret007GB</code>. Your imagination is the
+limit :)</li>
+</ul>
+<h2 id="fa-2-factor-authentication">2FA (2 Factor Authentication)</h2>
+<ul>
+<li>Enable wherever possible, particularly on your most sensitive
+accounts;</li>
+<li>Prefer the QR code scan method which generates a rotating pin (TOTP
+in technical terms, for Time-based One-Time Password). Helps not to be
+blocked if you travel and can’t receive an SMS;</li>
+<li>Recommended TOTP apps: Google Authenticator, Authy or Aegis which is
+open-source and easy to backup.</li>
+</ul>
+<h2 id="installing-a-new-software">Installing a new software</h2>
+<p>To avoid installing a virus or other kinds of malware it is important
+to always get a new software from a trusted source. Usually its official
+website or the App Stores from your operating system. Users of Linux
+(the topic of one of my <a
+href="https://ghelouis.fr/en/give-linux-a-try">previous articles</a>)
+won’t have these kinds of issues.</p>
+<p>As to the question of which software to choose amongst several
+alternatives, it all depends on your priorities: features, price,
+interoperability? As for myself I have a strong tendency to default to
+free and open-source ones (a topic I covered in <a
+href="https://ghelouis.fr/en/what-is-free-software">this past
+article</a>).</p>
+<h2 id="backups-pc">Backups (PC)</h2>
+<p>Nobody is free from getting potentially stolen from, spilled coffee
+or simply having a hard-drive give up on its life. Best to act now than
+regret it later.</p>
+<ul>
+<li>Do a regular incremental and encrypted backup. Incremental: after
+the first big backup the next ones will only record the latest changes.
+Encrypted: someone getting access to this backup won’t be able to read
+its content.</li>
+<li>The state of the art consists of having two backups: one at home
+(for instance on a hard-drive) and one at a different place (for
+instance in the cloud). But one backup is already a decent start.</li>
+<li>There are many tools and they will depend on your system,
+preferences and technical skills. I will let you do your own research.
+For the most curious, know that I use <a
+href="https://www.borgbackup.org/">Borg</a> but it’s probably not what
+you want to use unless you’re familiar with the command line :)</li>
+<li>Always check that the backup is sound: restore a file from time to
+time just to make sure everything works as expected.</li>
+</ul>
+<h2 id="good-security-practises">Good security practises</h2>
+<p>The previous tips should already help you be in good control of your
+digital life. Here’s some more bits of advice.</p>
+<ul>
+<li>Keep your system and software up to date. New features often come
+with security patches inside of an update;</li>
+<li>Don’t plug in random USB keys (for instance found on the
+ground);</li>
+<li>Never write down or share your passwords;</li>
+<li>If you find yourself in a weird or suddenly urgent situation take
+your time to assess what is happening. A call notifies you of fraudulent
+transactions in Nigeria? Are you being asked to perform certain actions
+or relinquish personal information? In doubt best to call back your bank
+yourself at the contact number that you know to be correct.</li>
+<li>Most scams or password leaks are actually facilitated by users
+themselves! Always be cautious before sharing private or confidential
+information. Bogus links in emails or SMS are another classic technique.
+It is super easy to copy a website’s entire appearance and serve it from
+a similar or innocent looking URL (<a
+href="https://ghelouis.fr/en/u-lost">google-search.com</a> instead of <a
+href="https://google.com">google.com</a> for example). In doubt always
+refer to the website or contact that you know to be the official
+one.</li>
+</ul>
+<h2 id="smartphones-android">Smartphones (Android)</h2>
+<p>I own an Android, so I will focus on this type of phone.</p>
+<ul>
+<li>Web browsing: Firefox + the uBlock Origin extension. Same benefits
+as listed higher up. You can also play YouTube videos with you screen
+locked.</li>
+<li>Recent Android versions enable you to block authorisations and
+notifications from single app’s settings. Fairly useful, in general
+these controls are restricted or incomplete inside the apps
+themselves.</li>
+<li>Doing regular backups applies here as well. Everything depends on
+what you want to backup and how. For example my contacts app has an
+export feature. Keeping photos safe is also a good idea. Personally I
+export everything I value on my laptop. This way my PC backup also has
+my phone’s.</li>
+</ul>
+<h2 id="protips">Protips</h2>
+<p>In Firefox you can access bookmarks via custom keywords and even
+inject parameters. For instance typing <code>y kittens</code> in my
+address bar does a search on YouTube for kittens. This is powered by the
+following configuration:</p>
+<ul>
+<li>Keyword: <code>y</code></li>
+<li>URL:
+<code>https://www.youtube.com/results?search_query=%s</code></li>
+</ul>
+<p>The <code>%s</code> is replaced by what gets typed after the keyword,
+in this case <code>kittens</code>. I’ve got a fair amount of shortcuts
+like this, all you need to do is analyse the URL. Another example I use
+frequently: <code>enfr something</code> and
+<code>fren quelque chose</code> to translate to and from English from
+French, using <a
+href="https://www.wordreference.com">wordreference.com</a>. Or also
+<code>wiki something</code> to search on Wikipedia.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Stay curious about your tools’ inner workings. IT is part of our
+daily life, it is now more important than ever to understand the basics
+of this world. Who knows, you might even start enjoying it :)</p>
+<h2 id="going-further">Going further</h2>
+<ul>
+<li><a href="https://www.ssi.gouv.fr/en/">ssi.gouv.fr/en/</a>: The ANSSI
+(French national cybersecurity agency) has got great resources and
+guides, for private individuals and professionals alike;</li>
+<li><a href="https://www.cnil.fr/en">cnil.fr/en</a>: Website of the CNIL
+(French commission of IT and individual liberties). Good content on the
+topics of personal data and online privacy (not sure how much of it is
+available in English though, sorry).</li>
+</ul>
+<footer class="footer">
+  <a rel="source" href="https://github.com/ghelouis/ghelouis.github.io">Source</a> – <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>
+</footer>
+</body>
+</html>
