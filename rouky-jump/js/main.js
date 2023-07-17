@@ -4,6 +4,12 @@ const FLOOR_HEIGHT = 48;
 const JUMP_FORCE = 800;
 const GRAVITY = 1800;
 
+// i18n
+const frLang = navigator.language.startsWith("fr")
+const pressSpaceToStartText = frLang ? "Appuyer sur espace pour commencer" : "Press space to start";
+const nightIsFallingText = frLang ? "La nuit tombe..." : "Night is falling...";
+const hightScoreText = frLang ? "Meilleur score : " : "High score : ";
+
 // initialize context
 kaboom({
   background: [51, 151, 255],
@@ -30,9 +36,9 @@ volume(0.2);
 
 // welcome screen
 scene("welcome", () => {
-  // background
-  add([
-    rect(width(), height() - 300),
+  // background tile
+  const backgroundTile = add([
+    rect(width(), 150),
     pos(width() / 2, height() / 2),
     color(30, 30, 30),
     anchor("center"),
@@ -41,7 +47,7 @@ scene("welcome", () => {
   // rotating rouky
   const rouky = add([
     sprite("rouky_casquette"),
-    pos(width() / 2, height() - 225),
+    pos(width() / 2, height() / 2 -  height() / 100 * 25),
     rotate(360),
     anchor("center"),
   ]);
@@ -61,15 +67,25 @@ scene("welcome", () => {
         }),
       },
     }),
-    pos(width() / 2, height() / 2 - 150),
+    pos(width() / 2, height() / 2),
     scale(2),
     anchor("center"),
   ]);
   add([
-    text("Appuyer sur espace pour commencer"),
-    pos(width() / 2, height() / 2 - 80),
+    text(pressSpaceToStartText),
+    pos(width() / 2, height() / 2 + backgroundTile.height),
     anchor("center"),
+    scale(0.7)
   ]);
+
+  // version
+  add([
+    text("v0.0.1"),
+    pos(width(), height()),
+    anchor("botright"),
+    scale(0.5)
+  ]);
+
 
   // press space (or click or tap on phone) to begin the game
   onKeyPress("space", () => {
@@ -91,9 +107,6 @@ scene("game", ({ highScore }) => {
   // define gravity
   setGravity(GRAVITY);
 
-  // add player object to screen
-  const player = add([sprite("rouky"), pos(80, 40), area(), body(), "player"]);
-
   function addFloor() {
     return add([
       rect(width(), FLOOR_HEIGHT),
@@ -108,6 +121,10 @@ scene("game", ({ highScore }) => {
 
   // add floor
   let floor = addFloor();
+
+  // add player
+  const player = add([sprite("rouky"), pos(80, 40), area(), body(), "player"]);
+
 
   function jump() {
     if (isGameOver) {
@@ -251,8 +268,8 @@ scene("game", ({ highScore }) => {
       body({ isStatic: true }),
       color(144, 238, 144),
     ]);
-    scoreLabel.pos.y = height() - 80;
-    highScoreLabel.pos.y = height() - 34;
+    scoreLabel.pos.y = height() - height() / 100 * 2 - highScoreLabel.height / 2 - 10;
+    highScoreLabel.pos.y = height() - height() / 100 * 2 - 10;
     isUpsideDown = true;
     wait(rand(8, 15), () => {
       play("upside_down_off");
@@ -262,8 +279,8 @@ scene("game", ({ highScore }) => {
       destroyAll("tree");
       destroy(upsideDownFloor);
       setGravity(GRAVITY);
-      scoreLabel.pos.y = 120;
-      highScoreLabel.pos.y = 24;
+      scoreLabel.pos.y = height() / 100 * 2 + highScoreLabel.height / 2;
+      highScoreLabel.pos.y = height() / 100 * 2;
       isUpsideDown = false;
       usePostEffect("");
       floor = addFloor();
@@ -280,7 +297,7 @@ scene("game", ({ highScore }) => {
       rand(0, 1) > 0.6
     ) {
       const label = add([
-        text("La nuit tombe..."),
+        text(nightIsFallingText),
         pos(width() / 2, height() / 2),
         scale(2),
         anchor("center"),
@@ -301,14 +318,13 @@ scene("game", ({ highScore }) => {
 
   // display score & high score
   let highScoreLabel = add([
-    text("Meilleur score : " + highScore),
-    pos(24, 24),
+    text(hightScoreText+ highScore),
+    pos(width() / 100, height() / 100 * 2),
+    scale(0.5)
   ]);
   let scoreLabel = add([
     text(score),
-    scale(2),
-    pos(150, 120),
-    anchor("center"),
+    pos(width() / 100, height() / 100 * 2 + highScoreLabel.height / 2),
   ]);
 
   // every frame: increment score, check if best score was beaten, manage speed and darkness
@@ -318,7 +334,10 @@ scene("game", ({ highScore }) => {
       scoreLabel.text = score;
       if (highScore !== 0 && score === highScore + 1) {
         play("new_high_score");
-        addKaboom(scoreLabel.pos);
+        addKaboom(vec2(
+          scoreLabel.pos.x + scoreLabel.width / 2,
+          scoreLabel.pos.y + scoreLabel.height / 2,
+        ));
       }
     }
     if (score % 1000 === 0) {
