@@ -20,14 +20,15 @@ loadSprite("rouky_casquette", "sprites/rouky_casquette.png");
 loadSprite("rouky", "sprites/rouky.png");
 loadSprite("food", "sprites/food.png");
 loadSprite("bolt", "sprites/bolt.png");
+loadSprite("kong", "sprites/kong.png");
 loadSound("explosion", "sounds/explosion.wav"); // https://freesound.org/people/LittleRobotSoundFactory/sounds/270310/
 loadSound("jump", "sounds/jump.wav"); // https://freesound.org/people/LittleRobotSoundFactory/sounds/270323/
 loadSound("crunch", "sounds/crunch.mp3"); // https://freesound.org/people/Borgory/sounds/548367/
 loadSound("new_high_score", "sounds/new_high_score.wav"); // https://freesound.org/people/rhodesmas/sounds/320655/
 loadSound("light_off", "sounds/light_off.wav"); // https://freesound.org/people/mtndewfan123/sounds/687451/
-loadSound("multi_jump_off", "sounds/multi_jump_off.wav"); // https://freesound.org/people/boonryan/sounds/91091/
 loadSound("upside_down", "sounds/upside_down.wav"); // https://freesound.org/people/Greenhourglass/sounds/159376/
 loadSound("upside_down_off", "sounds/upside_down_off.wav"); // https://freesound.org/people/dossantosbarbosa/sounds/221145/
+loadSound("blip", "sounds/blip.wav"); // https://freesound.org/people/oneloginacc/sounds/73444/
 loadShaderURL("invert", null, "shaders/invert.frag");
 loadShaderURL("light", null, "shaders/light.frag");
 
@@ -80,7 +81,7 @@ scene("welcome", () => {
 
   // version
   add([
-    text("v0.0.1"),
+    text("v0.0.2"),
     pos(width(), height()),
     anchor("botright"),
     scale(0.5)
@@ -101,7 +102,6 @@ scene("game", ({ highScore }) => {
   let speed = 480;
   let isDark = false;
   let isUpsideDown = false;
-  let multiJumpEnabled = false;
   let score = 0;
 
   // define gravity
@@ -130,13 +130,12 @@ scene("game", ({ highScore }) => {
     if (isGameOver) {
       // start a new game
       go("game", { highScore: highScore });
-    } else if (
-      isUpsideDown &&
-      (multiJumpEnabled || (!player.isFalling() && !player.isJumping()))
+    } else if (isUpsideDown &&
+      (!player.isFalling() && !player.isJumping())
     ) {
       player.jump(-JUMP_FORCE);
       play("jump");
-    } else if (player.isGrounded() || multiJumpEnabled) {
+    } else if (player.isGrounded()) {
       player.jump(JUMP_FORCE);
       play("jump");
     }
@@ -147,7 +146,7 @@ scene("game", ({ highScore }) => {
   onClick(() => jump());
 
   function spawnItem() {
-    // stop spawing items if the game is over
+    // stop spawning items if the game is over
     if (isGameOver) {
       return;
     }
@@ -157,15 +156,18 @@ scene("game", ({ highScore }) => {
     if (isUpsideDown) {
       itemAnchor = "topleft";
     }
-    function getItemHeight(n = 0) {
+
+    function getItemHeight(offset = 0) {
       if (isUpsideDown) {
-        return FLOOR_HEIGHT + n;
+        return FLOOR_HEIGHT + offset;
       } else {
-        return height() - FLOOR_HEIGHT - n;
+        return height() - FLOOR_HEIGHT - offset;
       }
     }
+
     let r = rand(0, 1);
-    if (score > 4000 && r > 0.95 && !isUpsideDown && !isDark) {
+
+    if (score > 4000 && r > 0.95 && !isUpsideDown && !isDark && get("bolt").length === 0) {
       // add bolt (rare)
       add([
         sprite("bolt"),
@@ -176,7 +178,7 @@ scene("game", ({ highScore }) => {
         offscreen({ destroy: true }),
         "bolt",
       ]);
-    } else if (score > 2000 && r > 0.92) {
+    } else if (score > 2000 && r > 0.92 && get("food").length === 0) {
       // add food (semi-frequent)
       add([
         sprite("food"),
@@ -186,6 +188,17 @@ scene("game", ({ highScore }) => {
         move(LEFT, speed),
         offscreen({ destroy: true }),
         "food",
+      ]);
+    } else if (r > 0.87 && get("kong").length === 0) {
+      // add kong (somewhat frequent)
+      add([
+        sprite("kong", {flipY: isUpsideDown}),
+        pos(width(), getItemHeight()),
+        area(),
+        itemAnchor,
+        move(LEFT, speed),
+        offscreen({ destroy: true }),
+        "kong",
       ]);
     } else {
       // add tree (default, almost always)
@@ -234,15 +247,24 @@ scene("game", ({ highScore }) => {
     }
   });
 
-  // if player collides with food, enable multi jump for a short while
+  // if player collides with food, play crunch sound
   player.onCollide("food", (food) => {
     play("crunch");
     destroy(food);
-    multiJumpEnabled = true;
-    wait(7, () => {
-      play("multi_jump_off");
-      multiJumpEnabled = false;
+  });
+
+  // if player collides with kong clear trees
+  player.onCollide("kong", (kong) => {
+    play("blip");
+    get("tree").forEach((tree) => {
+      if (isUpsideDown) {
+        addKaboom(vec2(tree.pos.x + tree.width / 2, tree.pos.y + tree.height / 2));
+      } else {
+        addKaboom(vec2(tree.pos.x + tree.width / 2, tree.pos.y - tree.height / 2));
+      }
+      destroy(tree);
     });
+    destroy(kong);
   });
 
   // if player collides with a bolt, switch on upside down mode for a bit
@@ -253,6 +275,7 @@ scene("game", ({ highScore }) => {
     }
     play("upside_down");
     destroyAll("food");
+    destroyAll("kong");
     destroyAll("bolt");
     destroyAll("tree");
     usePostEffect("invert");
@@ -275,6 +298,7 @@ scene("game", ({ highScore }) => {
       play("upside_down_off");
       player.flipY = false;
       destroyAll("food");
+      destroyAll("kong");
       destroyAll("bolt");
       destroyAll("tree");
       destroy(upsideDownFloor);
